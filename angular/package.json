@@ -1,0 +1,16 @@
+{
+  "name": "angular2typescriptwebpack",
+  "version": "1.0.0",
+  "description": "Test project",
+  "main": "src/index.html",
+  "scripts": {
+    "webpack": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.17.0",
+    "webpack": "^1.13.1"
+  }
+}
