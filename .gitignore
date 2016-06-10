@@ -1,4 +1,5 @@
 .idea
 angular-cli
+cordova
 node_modules
 npm-debug.log
