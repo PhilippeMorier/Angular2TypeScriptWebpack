@@ -9,7 +9,7 @@ module.exports = {
     },
 
     output: {
-        path: helpers.root('../cordova/www'),
+        path: helpers.root('./cordova/www'),
         filename: '[name].[hash].js'
     },
 
