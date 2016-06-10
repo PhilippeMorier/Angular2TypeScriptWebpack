@@ -1,5 +1,8 @@
 .idea
 angular-cli
 cordova
+!cordova/hooks/.gitkeep
+!cordova/platforms/.gitkeep
+!cordova/plugins/.gitkeep
 node_modules
 npm-debug.log
