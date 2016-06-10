@@ -1,6 +1,7 @@
 .idea
 angular-cli
 cordova
+!cordova/config.xml
 !cordova/hooks/.gitkeep
 !cordova/platforms/.gitkeep
 !cordova/plugins/.gitkeep
