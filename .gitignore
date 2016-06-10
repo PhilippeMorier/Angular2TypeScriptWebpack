@@ -1,2 +1,4 @@
 .idea
-angular/node_modules
+angular-cli
+node_modules
+npm-debug.log
