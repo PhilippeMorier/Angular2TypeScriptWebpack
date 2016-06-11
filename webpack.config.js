@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const execSync = require('child_process').execSync;
 
 const helpers = require('./config/helpers.js');
@@ -25,12 +24,11 @@ module.exports = {
     },
 
     plugins: [
-        new CopyWebpackPlugin([{
-            from: './src/assets',
-            to: './assets'
-        }]),
-
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            favicon: './src/assets/favicon.ico',
+            excludeChunks: ['spec']
+        }),
 
         function ReactOnWebpackWatchRunEventPlugin() {
             this.plugin('run', function (watching, callback) {
