@@ -5,17 +5,27 @@
   "main": "src/index.html",
   "scripts": {
     "cordova": "cd ./cordova && cordova",
-    "webpack": "webpack",
     "karma": "karma",
-
+    "rimraf": "rimraf",
+    "typings": "typings",
+    "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "copy-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^3.0.1",
     "cordova": "^6.2.0",
-    "html-webpack-plugin": "^2.17.0",
+    "html-webpack-plugin": "^2.20.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-jasmine": "^1.0.2",
+    "karma-jsdom-launcher": "^3.0.0",
+    "npm": "^3.9.5",
+    "rimraf": "^2.5.2",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.5",
     "webpack": "^1.13.1"
   }
 }

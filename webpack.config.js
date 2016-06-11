@@ -1,12 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const exec = require('child_process').exec;
+const execSync = require('child_process').execSync;
 
-const helpers = require('./config/helpers');
+const helpers = require('./config/helpers.js');
 
 module.exports = {
     entry: {
-        'app': './src/main.ts'
+        'app': './src/main.ts',
+        'spec': './src/spec.js'
     },
 
     output: {
@@ -14,18 +15,35 @@ module.exports = {
         filename: '[name].[hash].js'
     },
 
+    module: {
+        loaders: [
+            {
+                test: /\.tsx?$/,
+                loader: 'ts-loader'
+            }
+        ]
+    },
+
     plugins: [
         new CopyWebpackPlugin([{
-            from: 'src/assets',
-            to: 'assets'
+            from: './src/assets',
+            to: './assets'
         }]),
 
-        new HtmlWebpackPlugin({
-            template: 'src/index.html'
-        }),
+        new HtmlWebpackPlugin(),
 
-        function ReactOnWatchRunPlugin() {
+        function ReactOnWebpackWatchRunEventPlugin() {
+            this.plugin('run', function (watching, callback) {
+                rimraf('./cordova/www/*');
+                callback();
+            });
+        },
+
+        function ReactOnWebpackWatchRunEventPlugin() {
             this.plugin('watch-run', function (watching, callback) {
+
+                rimraf('./cordova/www/*.{js,html}');
+
                 var currentDate = new Date();
                 console.log();
                 console.log(
@@ -38,21 +56,19 @@ module.exports = {
             });
         },
 
-        function ReactOnDonePlugin() {
+        function ReactOnWebpackDoneEventPlugin() {
             this.plugin('done', function () {
+                execSync('npm run cordova build browser', {stdio: [process.stdin, process.stdout, process.stderr]});
+                console.log('└── \u001b[32;1mCordova\u001b[0m');
 
-                exec('npm run cordova build browser', function (error, stdout, stderr) {
-                    console.log('Cordova:');
-
-                    if (error !== null) {
-                        console.log('└── \u001b[31;1mFailed\u001b[0m building browser platform');
-                        console.log('   └── ' + stderr.split('\r\n\n')[0]);
-                    }
-                    else {
-                        console.log('└── \u001b[32;1mSuccessfully\u001b[0m browser platform builded');
-                    }
-                });
-            })
+                execSync('npm run karma start', {stdio: [process.stdin, process.stdout, process.stderr]});
+                console.log('└── \u001b[32;1mKarma\u001b[0m');
+            });
         }
     ]
 };
+
+function rimraf(pattern) {
+    execSync('npm run rimraf -- ' + pattern, {stdio: [process.stdin, process.stdout, process.stderr]});
+    console.log('└── \u001b[32;1mClean\u001b[0m');
+}
