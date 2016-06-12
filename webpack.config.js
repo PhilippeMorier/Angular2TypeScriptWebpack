@@ -6,7 +6,14 @@ const helpers = require('./config/helpers.js');
 module.exports = {
     entry: {
         'app': './src/main.ts',
-        'spec': './src/spec.js'
+        'spec': './src/spec.js',
+        'vendor': [
+            'core-js',
+            'zone.js',
+            'rxjs',
+
+            '@angular/core'
+        ]
     },
 
     output: {
@@ -17,8 +24,12 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.tsx?$/,
+                test: /\.ts$/,
                 loader: 'ts-loader'
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader'
             }
         ]
     },

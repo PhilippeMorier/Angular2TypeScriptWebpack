@@ -1,3 +1,4 @@
-import { Index } from './app/index.ts';
+import { bootstrap } from '@angular/platform-browser-dynamic';
+import { AppComponent } from './app/app.component.ts';
 
-new Index().add(40, 2);
+bootstrap(AppComponent);
