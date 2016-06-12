@@ -15,6 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      './cordova/www/vendor.*.js',
       './cordova/www/app.*.js',
       './cordova/www/spec.*.js'
     ],
