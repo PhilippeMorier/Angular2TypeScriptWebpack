@@ -72,8 +72,8 @@ module.exports = {
                 execSync('npm run cordova build browser', {stdio: [process.stdin, process.stdout, process.stderr]});
                 console.log('└── \u001b[32;1mCordova\u001b[0m');
 
-                // execSync('npm run karma start', {stdio: [process.stdin, process.stdout, process.stderr]});
-                // console.log('└── \u001b[32;1mKarma\u001b[0m');
+                execSync('npm run karma start', {stdio: [process.stdin, process.stdout, process.stderr]});
+                console.log('└── \u001b[32;1mKarma\u001b[0m');
             });
         }
     ]
