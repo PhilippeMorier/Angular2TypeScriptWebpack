@@ -1,6 +1,11 @@
 Angular2TypeScriptWebpack
 =========================
 
+## Todo
+1. Unit test for component
+2. Setup TsLint and codelyzer
+3. Setup code coverage
+
 ## 1. @Component, @Pipe, @Router
 ###1.1 Error
 ```
