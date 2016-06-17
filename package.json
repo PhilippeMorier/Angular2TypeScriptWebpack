@@ -10,7 +10,7 @@
     "typings": "typings",
     "webpack": "webpack --progress",
     "test": "karma start",
-    "postinstall": "typings install"
+    "postinstall": "typings install && npm run cordova prepare"
   },
   "author": "",
   "license": "ISC",
