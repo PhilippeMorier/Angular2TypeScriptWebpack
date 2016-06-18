@@ -7,6 +7,10 @@ module.exports = {
     entry: {
         'app': './src/main.ts',
         'spec': [
+            'core-js',
+            'zone.js',
+            'rxjs',
+            
             './src/spec.ts'
         ],
         'vendor': [
