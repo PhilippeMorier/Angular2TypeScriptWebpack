@@ -5,9 +5,4 @@
 //setBaseTestProviders(TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS, TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);
 
 var testContext = require.context('./app', true, /\.spec\.ts/);
-
-function requireAll(requireContext) {
-    return requireContext.keys().map(requireContext);
-}
-
-var modules = requireAll(testContext);
+var modules = testContext.keys().map(testContext);
