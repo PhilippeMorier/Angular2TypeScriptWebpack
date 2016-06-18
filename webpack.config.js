@@ -6,12 +6,16 @@ const helpers = require('./config/helpers.js');
 module.exports = {
     entry: {
         'app': './src/main.ts',
-        'spec': './src/spec.js',
+        'spec': [
+            './src/spec.ts'
+        ],
         'vendor': [
             'core-js',
             'zone.js',
             'rxjs',
 
+            '@angular/common',
+            '@angular/compiler',
             '@angular/core'
         ]
     },
