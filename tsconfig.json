@@ -8,7 +8,6 @@
     "./node_modules/@angular/common/index.d.ts",
     "./node_modules/@angular/compiler/index.d.ts",
     "./node_modules/@angular/core/index.d.ts",
-    "./node_modules/@angular/platform-browser/index.d.ts",
     "./node_modules/@angular/platform-browser-dynamic/index.d.ts",
     "./typings/index.d.ts"
   ]
