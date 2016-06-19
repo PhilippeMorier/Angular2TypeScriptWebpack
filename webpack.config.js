@@ -7,14 +7,18 @@ const helpers = require('./config/helpers.js');
 module.exports = {
     entry: {
         'app': [
-            './src/main.ts'
-        ],
-        'vendor': [
             'core-js',
             'zone.js',
-            'rxjs'
+            'rxjs',
+            
+            './src/main.ts'
         ],
         'spec': [
+            'core-js',
+            'zone.js',
+            'rxjs',
+            
+            './src/app/app.component.ts',
             './src/spec.ts'
         ]
     },
@@ -40,12 +44,10 @@ module.exports = {
     devtool: '#inline-source-map',
 
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vendor', '[name].[hash].js'),
-
         new HtmlWebpackPlugin({
             template: './src/index.html',
             favicon: './src/assets/favicon.ico',
-            //excludeChunks: ['spec']
+            excludeChunks: ['spec']
         }),
 
         function ReactOnWebpackWatchRunEventPlugin() {
