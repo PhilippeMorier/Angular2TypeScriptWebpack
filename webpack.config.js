@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const execSync = require('child_process').execSync;
 
@@ -5,22 +6,16 @@ const helpers = require('./config/helpers.js');
 
 module.exports = {
     entry: {
-        'app': './src/main.ts',
-        'spec': [
-            'core-js',
-            'zone.js',
-            'rxjs',
-            
-            './src/spec.ts'
+        'app': [
+            './src/main.ts'
         ],
         'vendor': [
             'core-js',
             'zone.js',
-            'rxjs',
-
-            '@angular/common',
-            '@angular/compiler',
-            '@angular/core'
+            'rxjs'
+        ],
+        'spec': [
+            './src/spec.ts'
         ]
     },
 
@@ -45,10 +40,12 @@ module.exports = {
     devtool: '#inline-source-map',
 
     plugins: [
+        new webpack.optimize.CommonsChunkPlugin('vendor', '[name].[hash].js'),
+
         new HtmlWebpackPlugin({
             template: './src/index.html',
             favicon: './src/assets/favicon.ico',
-            excludeChunks: ['spec']
+            //excludeChunks: ['spec']
         }),
 
         function ReactOnWebpackWatchRunEventPlugin() {
