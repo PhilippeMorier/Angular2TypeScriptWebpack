@@ -5,12 +5,15 @@
   "main": "src/index.html",
   "scripts": {
     "cordova": "cd ./cordova && cordova",
+    "tslint": "tslint",
     "karma": "karma",
     "rimraf": "rimraf",
     "typings": "typings",
     "webpack": "webpack --progress",
+    
     "test": "karma start",
-    "postinstall": "typings install && npm run cordova prepare"
+    "postinstall": "typings install && npm run cordova prepare",
+    "lint": "tslint --config 'tslint.json' './src/**/*.ts'"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +29,7 @@
     "npm": "^3.9.5",
     "rimraf": "^2.5.2",
     "ts-loader": "^0.8.2",
+    "tslint": "^3.11.0",
     "typescript": "^1.8.10",
     "typings": "^1.0.5",
     "webpack": "^1.13.1"
