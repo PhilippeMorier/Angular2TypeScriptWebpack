@@ -52,41 +52,45 @@ module.exports = {
 
         function ReactOnWebpackWatchRunEventPlugin() {
             this.plugin('run', function (watching, callback) {
-                rimraf('./cordova/www/*');
+                logCurrentDateFormatted();
+                npmRun('rimraf -- ./cordova/www/*', 'Clean');
+                npmRun('lint', 'Lint');
+                
                 callback();
             });
         },
 
         function ReactOnWebpackWatchRunEventPlugin() {
             this.plugin('watch-run', function (watching, callback) {
-
-                rimraf('./cordova/www/*.{js,html}');
-
-                var currentDate = new Date();
-                console.log();
-                console.log(
-                    'Built: '
-                    + currentDate.getDate() + '.' + (currentDate.getMonth() + 1) + '.' + currentDate.getFullYear()
-                    + ' - \u001b[33;1m'
-                    + currentDate.getHours() + ':' + currentDate.getMinutes() + '.' + currentDate.getSeconds()
-                    + '\u001b[0m');
+                logCurrentDateFormatted();
+                npmRun('rimraf -- ./cordova/www/*.{js,html}', 'Clean');
+                npmRun('lint', 'Lint');
+                
                 callback();
             });
         },
 
         function ReactOnWebpackDoneEventPlugin() {
             this.plugin('done', function () {
-                execSync('npm run cordova build browser', {stdio: [process.stdin, process.stdout, process.stderr]});
-                console.log('└── \u001b[32;1mCordova\u001b[0m');
-
-                execSync('npm run karma start', {stdio: [process.stdin, process.stdout, process.stderr]});
-                console.log('└── \u001b[32;1mKarma\u001b[0m');
+                npmRun('cordova build browser', 'Cordova');
+                npmRun('karma start', 'Karma');
             });
         }
     ]
 };
 
-function rimraf(pattern) {
-    execSync('npm run rimraf -- ' + pattern, {stdio: [process.stdin, process.stdout, process.stderr]});
-    console.log('└── \u001b[32;1mClean\u001b[0m');
+function npmRun(command, title) {
+    execSync('npm run ' + command, {stdio: [process.stdin, process.stdout, process.stderr]});
+    console.log('└── \u001b[32;1m' + title + '\u001b[0m');
+}
+
+function logCurrentDateFormatted() {
+    var currentDate = new Date();
+    console.log();
+    console.log(
+        'Built: '
+        + currentDate.getDate() + '.' + (currentDate.getMonth() + 1) + '.' + currentDate.getFullYear()
+        + ' - \u001b[33;1m'
+        + currentDate.getHours() + ':' + currentDate.getMinutes() + '.' + currentDate.getSeconds()
+        + '\u001b[0m');
 }
