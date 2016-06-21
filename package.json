@@ -10,7 +10,6 @@
     "rimraf": "rimraf",
     "typings": "typings",
     "webpack": "webpack --progress",
-    
     "test": "karma start",
     "postinstall": "typings install && npm run cordova prepare",
     "lint": "tslint --config 'tslint.json' './src/**/*.ts'"
@@ -18,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "codelyzer": "0.0.23",
     "cordova": "^6.2.0",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.20.0",
