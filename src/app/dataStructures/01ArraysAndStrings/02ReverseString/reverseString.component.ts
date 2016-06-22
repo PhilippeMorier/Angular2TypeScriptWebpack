@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     template: require('./reverseString.component.html')
 })
 export class ReverseStringComponent {
-    public reverseString(toReverseWord): string {
+    public reverseString(toReverseWord: string): string {
         let stack: string[] = [];
 
         for (let character of toReverseWord) {
@@ -13,7 +13,7 @@ export class ReverseStringComponent {
         }
 
         let reversedWord: string = '';
-        for (let i = 0; i < toReverseWord.length; i++) {
+        for (let i: number = 0; i < toReverseWord.length; i++) {
             reversedWord += stack.pop();
         }
 

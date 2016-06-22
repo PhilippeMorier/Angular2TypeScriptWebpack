@@ -8,11 +8,11 @@ describe('AppComponent', () => {
         AppComponent
     ]);
 
-    it('should be created', inject([AppComponent], (appComponent) => {
+    it('should be created', inject([AppComponent], (appComponent: AppComponent) => {
         expect(appComponent).toBeDefined();
     }));
 
-    it('should have title', inject([AppComponent], (appComponent) => {
+    it('should have title', inject([AppComponent], (appComponent: AppComponent) => {
         expect(appComponent.title).toEqual('@@@');
     }));
 

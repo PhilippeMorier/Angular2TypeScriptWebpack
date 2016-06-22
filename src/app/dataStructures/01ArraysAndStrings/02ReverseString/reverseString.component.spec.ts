@@ -8,13 +8,13 @@ describe('ReverseStringComponent', () => {
         ReverseStringComponent
     ]);
 
-    it('should be created', inject([ReverseStringComponent], (reverseStringComponent) => {
+    it('should be created', inject([ReverseStringComponent], (reverseStringComponent: ReverseStringComponent) => {
         expect(reverseStringComponent).toBeDefined();
     }));
 
     describe('reverseString()', () => {
 
-        it('should be return \'eppilihp\' for \'philippe\'', inject([ReverseStringComponent], (reverseStringComponent) => {
+        it('should be return \'eppilihp\' for \'philippe\'', inject([ReverseStringComponent], (reverseStringComponent: ReverseStringComponent) => {
             expect(reverseStringComponent.reverseString('philippe')).toEqual('eppilihp');
         }));
 

@@ -4,5 +4,5 @@ import { TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS, TEST_BROWSER_DYNAMIC_APPLICATI
 setBaseTestProviders(TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS, TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);
 
 let requirePreventingTs2339AboutNonExistingContext: any = require;
-let testContext = requirePreventingTs2339AboutNonExistingContext.context('./app', true, /\.spec\.ts/);
-let modules = testContext.keys().map(testContext);
+let testContext: any = requirePreventingTs2339AboutNonExistingContext.context('./app', true, /\.spec\.ts/);
+testContext.keys().map(testContext);
