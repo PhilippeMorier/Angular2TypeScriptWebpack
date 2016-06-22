@@ -1,4 +1,4 @@
-import { beforeEachProviders, async, describe, inject, it } from '@angular/core/testing';
+import { beforeEachProviders, describe, inject, it } from '@angular/core/testing';
 
 import { IsPermutationComponent } from './isPermutation.component.ts';
 
