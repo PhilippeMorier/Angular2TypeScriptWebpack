@@ -81,6 +81,8 @@
     "triple-equals": true,
     "use-isnan": true,
     "use-strict": true,
+    "eofline": true,
+    
     "class-name": true,
     "comment-format": [
       true,
