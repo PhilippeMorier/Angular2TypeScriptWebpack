@@ -82,15 +82,22 @@
     "use-isnan": true,
     "use-strict": true,
     "eofline": true,
-    
+    "indent": [
+      true,
+      "spaces"
+    ],
+    "linebreak-style": [true, "LF"],
+    "max-line-length": [true, 240],
+    "no-default-export": true,
+    "no-require-imports": false,
+    "no-trailing-whitespace": true,
+    "object-literal-sort-keys": true,
+    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
+
     "class-name": true,
     "comment-format": [
       true,
       "check-space"
-    ],
-    "indent": [
-      true,
-      "spaces"
     ],
     "no-duplicate-variable": true,
     "no-eval": true,

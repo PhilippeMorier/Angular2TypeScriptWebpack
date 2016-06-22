@@ -4,9 +4,9 @@ import { ReverseStringComponent } from './dataStructures/01ArraysAndStrings/02Re
 import { IsPermutationComponent } from './dataStructures/01ArraysAndStrings/03IsPermutation/isPermutation.component.ts';
 
 @Component({
+    directives: [UniqueCharactersComponent, ReverseStringComponent, IsPermutationComponent],
     selector: 'cut-app',
-    template: require('./app.component.html'),
-    directives: [UniqueCharactersComponent, ReverseStringComponent, IsPermutationComponent]
+    template: require('./app.component.html')
 })
 export class AppComponent {
     public title: string = '@@@';
