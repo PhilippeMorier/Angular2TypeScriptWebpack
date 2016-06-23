@@ -4,7 +4,7 @@ Angular2TypeScriptWebpack
 ## Todo
 1. Setup Barrels file (index.ts)
 2. Setup code coverage
-   (https://github.com/AngularClass/angular2-webpack-starter/issues/178, https://github.com/kozlice/angular2-webpack-boilerplate)
+   (https://github.com/AngularClass/angular2-webpack-starter/issues/178#issuecomment-224555653, https://github.com/kozlice/angular2-webpack-boilerplate)
 
 ## 1. @Component, @Pipe, @Router
 ###1.1 Error
