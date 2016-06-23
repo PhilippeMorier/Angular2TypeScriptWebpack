@@ -42,7 +42,7 @@ describe('AppComponent', () => {
     it('should hide title if title is unavailable',
         inject([TestComponentBuilder], (testComponentBuilder: TestComponentBuilder) => {
             testComponentBuilder
-                .createAsync(AppComponent)
+                .createAsync(AppComponent as Type)
                 .then((fixture: ComponentFixture<AppComponent>) => {
                     let appComponent: AppComponent = fixture.debugElement.componentInstance;
                     let appComponentTemplate: DebugElement  = fixture.debugElement.nativeElement;
