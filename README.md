@@ -2,9 +2,9 @@ Angular2TypeScriptWebpack
 =========================
 
 ## Todo
-1. Unit test for component
-2. Setup TsLint and codelyzer
-3. Setup code coverage
+1. Setup Barrels file (index.ts)
+2. Setup code coverage
+   (https://github.com/AngularClass/angular2-webpack-starter/issues/178, https://github.com/kozlice/angular2-webpack-boilerplate)
 
 ## 1. @Component, @Pipe, @Router
 ###1.1 Error
