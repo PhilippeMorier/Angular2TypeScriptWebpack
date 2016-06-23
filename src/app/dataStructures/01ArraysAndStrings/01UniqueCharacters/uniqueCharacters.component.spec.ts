@@ -1,4 +1,4 @@
-import { beforeEachProviders, describe, inject, it } from '@angular/core/testing';
+import { beforeEachProviders, describe, expect, inject, it } from '@angular/core/testing';
 
 import { UniqueCharactersComponent } from './uniqueCharacters.component.ts';
 
