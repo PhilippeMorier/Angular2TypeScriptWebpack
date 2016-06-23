@@ -45,12 +45,13 @@ describe('AppComponent', () => {
                 .createAsync(AppComponent)
                 .then((fixture: ComponentFixture<AppComponent>) => {
                     let appComponent: AppComponent = fixture.debugElement.componentInstance;
+                    let appComponentTemplate: DebugElement  = fixture.debugElement.nativeElement;
 
                     appComponent.title = undefined;
                     fixture.detectChanges();
 
                     expect(getDOM()
-                        .querySelectorAll(fixture.debugElement.nativeElement, 'h5')
+                        .querySelectorAll(appComponentTemplate, 'h5')
                         .length)
                         .toEqual(0);
                 });
