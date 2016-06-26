@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "experimentalDecorators": true,
-    "sourceMap": true,
+    "inlineSourceMap": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": false,
     "target": "es5"
   },
   "files": [

@@ -10,14 +10,14 @@ module.exports = {
             'core-js',
             'zone.js',
             'rxjs',
-            
+
             './src/main.ts'
         ],
         'spec': [
             'core-js',
             'zone.js',
             'rxjs',
-            
+
             './src/app/app.component.ts',
             './src/spec.ts'
         ]
@@ -38,10 +38,20 @@ module.exports = {
                 test: /\.html$/,
                 loader: 'html-loader'
             }
+        ],
+        postLoaders: [
+            {
+                test: /\.ts$/,
+                loader: 'istanbul-instrumenter-loader',
+                exclude: [
+                    /node_modules/,
+                    /\.(e2e|spec)\.ts$/
+                ]
+            }
         ]
     },
 
-    devtool: '#inline-source-map',
+    devtool: 'inline-source-map',
 
     plugins: [
         new HtmlWebpackPlugin({
