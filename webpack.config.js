@@ -44,8 +44,10 @@ module.exports = {
                 test: /\.ts$/,
                 loader: 'istanbul-instrumenter-loader',
                 exclude: [
-                    /node_modules/,
-                    /\.(e2e|spec)\.ts$/
+                    /main.ts/,
+                    /spec.ts/,
+                    /\.(e2e|spec)\.ts$/,
+                    /node_modules/
                 ]
             }
         ]
