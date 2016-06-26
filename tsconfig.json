@@ -12,6 +12,7 @@
     "./node_modules/@angular/compiler/index.d.ts",
     "./node_modules/@angular/core/index.d.ts",
     "./node_modules/@angular/platform-browser-dynamic/index.d.ts",
+    "./node_modules/rxjs/Rx.d.ts",
     "./typings/index.d.ts"
   ]
 }
