@@ -63,7 +63,7 @@ module.exports = {
         function ReactOnWebpackWatchRunEventPlugin() {
             this.plugin('run', function (watching, callback) {
                 logCurrentDateFormatted();
-                npmRun('rimraf -- ./cordova/www/*', 'Clean');
+                npmRun('rimraf -- ./cordova/www/* ./coverage', 'Clean');
                 npmRun('lint', 'Lint');
                 
                 callback();
@@ -73,7 +73,7 @@ module.exports = {
         function ReactOnWebpackWatchRunEventPlugin() {
             this.plugin('watch-run', function (watching, callback) {
                 logCurrentDateFormatted();
-                npmRun('rimraf -- ./cordova/www/*.{js,html}', 'Clean');
+                npmRun('rimraf -- ./cordova/www/*.{js,html} ./coverage', 'Clean');
                 npmRun('lint', 'Lint');
                 
                 callback();
