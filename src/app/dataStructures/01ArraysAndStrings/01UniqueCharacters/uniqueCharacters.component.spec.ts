@@ -34,6 +34,14 @@ describe('UniqueCharacters', () => {
             expect(uniqueCharactersComponent.hasAllUniqueCharacters('animal')).toEqual(false);
         }));
 
+        it('should be return true for \'abcdefghijklmnopqrstuvwxyz\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
+            expect(uniqueCharactersComponent.hasAllUniqueCharacters('abcdefghijklmnopqrstuvwxyz')).toBeTruthy();
+        }));
+
+        it('should throw because of invalid character', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
+            expect(() => uniqueCharactersComponent.hasAllUniqueCharacters('UPPERCASE')).toThrow();
+        }));
+
     });
 
 });
