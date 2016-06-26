@@ -5,6 +5,7 @@ cordova
 !cordova/hooks/.gitkeep
 !cordova/platforms/.gitkeep
 !cordova/plugins/.gitkeep
+coverage
 node_modules
 npm-debug.log
 typings
