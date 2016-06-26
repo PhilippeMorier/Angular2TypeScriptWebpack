@@ -26,6 +26,10 @@ describe('IsPermutationComponent', () => {
             expect(isPermutationComponent.isPermutation('abc', 'aac')).toBeFalsy();
         }));
 
+        it('should be return false it string have different length', inject([IsPermutationComponent], (isPermutationComponent: IsPermutationComponent) => {
+            expect(isPermutationComponent.isPermutation('123', '1234')).toBeFalsy();
+        }));
+
     });
 
 });
