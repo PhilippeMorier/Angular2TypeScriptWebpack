@@ -7,25 +7,25 @@ import { Component } from '@angular/core';
 export class ReplaceAllSpacesComponent {
     public replaceAllSpacesIn(text: string): string {
 
-        let textArray: string[] = text.split('');
+        let characters: string[] = text.split('');
         let insertIndex: number = text.length - 1;
         let readIndex: number = this.getLastLetterIndex(text);
 
         while (readIndex >= 0) {
-            if (textArray[readIndex] !== ' ') {
-                textArray[insertIndex] = text[readIndex];
+            if (characters[readIndex] !== ' ') {
+                characters[insertIndex] = text[readIndex];
             }
             else {
-                textArray[insertIndex] = '0';
-                textArray[--insertIndex] = '2';
-                textArray[--insertIndex] = '%';
+                characters[insertIndex] = '0';
+                characters[--insertIndex] = '2';
+                characters[--insertIndex] = '%';
             }
 
             insertIndex--;
             readIndex--;
         }
 
-        return textArray.join('');
+        return characters.join('');
     }
 
     private getLastLetterIndex(text: string): number {
