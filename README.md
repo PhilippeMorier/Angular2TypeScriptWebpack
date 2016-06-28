@@ -4,6 +4,7 @@ Angular2TypeScriptWebpack
 ## Todo
 1. Setup Barrels file (index.ts)
 2. Unit test with fakeAsync() and tick()
+3. E2E tests
 
 ## 1. @Component, @Pipe, @Router
 ###1.1 Error
