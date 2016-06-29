@@ -11,7 +11,7 @@
     "typings": "typings",
     "webpack": "webpack --progress",
     "test": "karma start",
-    "postinstall": "typings install && npm run cordova prepare",
+    "postinstall": "typings install",
     "lint": "tslint --config 'tslint.json' './src/**/*.ts'"
   },
   "author": "",
