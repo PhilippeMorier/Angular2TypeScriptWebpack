@@ -14,27 +14,27 @@ describe('UniqueCharacters', () => {
 
     describe('hasAllUniqueCharacters()', () => {
 
-        it('should be return true for \'number\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
+        it('should return true for \'number\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
             expect(uniqueCharactersComponent.hasAllUniqueCharacters('number')).toEqual(true);
         }));
 
-        it('should be return true for \'a\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
+        it('should return true for \'a\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
             expect(uniqueCharactersComponent.hasAllUniqueCharacters('a')).toEqual(true);
         }));
 
-        it('should be return true for \'z\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
+        it('should return true for \'z\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
             expect(uniqueCharactersComponent.hasAllUniqueCharacters('z')).toEqual(true);
         }));
 
-        it('should be return false for \'aa\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
+        it('should return false for \'aa\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
             expect(uniqueCharactersComponent.hasAllUniqueCharacters('aa')).toEqual(false);
         }));
 
-        it('should be return false for \'animal\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
+        it('should return false for \'animal\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
             expect(uniqueCharactersComponent.hasAllUniqueCharacters('animal')).toEqual(false);
         }));
 
-        it('should be return true for \'abcdefghijklmnopqrstuvwxyz\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
+        it('should return true for \'abcdefghijklmnopqrstuvwxyz\'', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
             expect(uniqueCharactersComponent.hasAllUniqueCharacters('abcdefghijklmnopqrstuvwxyz')).toBeTruthy();
         }));
 

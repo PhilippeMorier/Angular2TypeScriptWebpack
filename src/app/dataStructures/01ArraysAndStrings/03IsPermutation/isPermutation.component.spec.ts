@@ -14,19 +14,19 @@ describe('IsPermutationComponent', () => {
 
     describe('isPermutation()', () => {
 
-        it('should be return true for \'eppilihp\' and \'philippe\'', inject([IsPermutationComponent], (isPermutationComponent: IsPermutationComponent) => {
+        it('should return true for \'eppilihp\' and \'philippe\'', inject([IsPermutationComponent], (isPermutationComponent: IsPermutationComponent) => {
             expect(isPermutationComponent.isPermutation('eppilihp', 'philippe')).toBeTruthy();
         }));
 
-        it('should be return true for \'fooof\' and \'ofofo\'', inject([IsPermutationComponent], (isPermutationComponent: IsPermutationComponent) => {
+        it('should return true for \'fooof\' and \'ofofo\'', inject([IsPermutationComponent], (isPermutationComponent: IsPermutationComponent) => {
             expect(isPermutationComponent.isPermutation('fooof', 'ofofo')).toBeTruthy();
         }));
 
-        it('should be return true for \'abc\' and \'aac\'', inject([IsPermutationComponent], (isPermutationComponent: IsPermutationComponent) => {
+        it('should return true for \'abc\' and \'aac\'', inject([IsPermutationComponent], (isPermutationComponent: IsPermutationComponent) => {
             expect(isPermutationComponent.isPermutation('abc', 'aac')).toBeFalsy();
         }));
 
-        it('should be return false it string have different length', inject([IsPermutationComponent], (isPermutationComponent: IsPermutationComponent) => {
+        it('should return false it string have different length', inject([IsPermutationComponent], (isPermutationComponent: IsPermutationComponent) => {
             expect(isPermutationComponent.isPermutation('123', '1234')).toBeFalsy();
         }));
 
