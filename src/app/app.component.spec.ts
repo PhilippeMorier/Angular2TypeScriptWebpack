@@ -17,7 +17,7 @@ describe('AppComponent', () => {
     }));
 
     it('should have title', inject([AppComponent], (appComponent: AppComponent) => {
-        expect(appComponent.title).toEqual('@@@');
+        expect(appComponent.title).toEqual('CUT App');
     }));
 
     it('should show title if title is available',
@@ -32,7 +32,7 @@ describe('AppComponent', () => {
                     fixture.detectChanges();
 
                     expect(getDOM()
-                        .querySelectorAll(appComponentTemplate, 'h5')
+                        .querySelectorAll(appComponentTemplate, 'h1')
                         .length)
                         .toEqual(1);
                 });
@@ -51,7 +51,7 @@ describe('AppComponent', () => {
                     fixture.detectChanges();
 
                     expect(getDOM()
-                        .querySelectorAll(appComponentTemplate, 'h5')
+                        .querySelectorAll(appComponentTemplate, 'h1')
                         .length)
                         .toEqual(0);
                 });
