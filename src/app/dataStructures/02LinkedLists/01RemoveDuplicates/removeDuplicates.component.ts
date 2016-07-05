@@ -46,12 +46,20 @@ export class SingleLinkedList<T> {
     public firstNode: Node<T>;
     public lastNode: Node<T>;
 
-    public constructor(firstNode: Node<T>) {
-        this.firstNode = firstNode;
-        this.lastNode = firstNode;
+    public constructor(firstNode?: Node<T>) {
+        if (firstNode) {
+            this.firstNode = firstNode;
+            this.lastNode = firstNode;
+        }
     }
 
     public addNodeAtEnd(node: Node<T>): void {
+        if(!this.lastNode) {
+            this.constructor(node);
+
+            return;
+        }
+        
         this.lastNode.nextNode = node;
         this.lastNode = node;
     }

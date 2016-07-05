@@ -4,6 +4,7 @@ import { ReverseStringComponent } from './dataStructures/01ArraysAndStrings/02Re
 import { IsPermutationComponent } from './dataStructures/01ArraysAndStrings/03IsPermutation/isPermutation.component.ts';
 import { ReplaceAllSpacesComponent } from './dataStructures/01ArraysAndStrings/04ReplaceAllSpaces/replaceAllSpaces.component.ts';
 import { RemoveDuplicatesComponent } from './dataStructures/02LinkedLists/01RemoveDuplicates/removeDuplicates.component.ts';
+import { PartitionAroundValueComponent } from './dataStructures/02LinkedLists/04PartitionAroundValue/partitionAroundValue.component.ts';
 
 @Component({
     directives: [
@@ -11,7 +12,8 @@ import { RemoveDuplicatesComponent } from './dataStructures/02LinkedLists/01Remo
         ReverseStringComponent,
         IsPermutationComponent,
         ReplaceAllSpacesComponent,
-        RemoveDuplicatesComponent
+        RemoveDuplicatesComponent,
+        PartitionAroundValueComponent
     ],
     selector: 'cut-app',
     template: require('./app.component.html')
