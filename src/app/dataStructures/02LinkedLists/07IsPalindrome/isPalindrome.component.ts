@@ -6,6 +6,19 @@ import { SingleLinkedList, Node } from '../01RemoveDuplicates/removeDuplicates.c
     template: require('./isPalindrome.component.html')
 })
 export class IsPalindromeComponent {
+    public list: SingleLinkedList<number>;
+
+    public constructor() {
+        this.list = new SingleLinkedList<number>();
+        this.list.addNodeAtEnd(new Node(0));
+        this.list.addNodeAtEnd(new Node(1));
+        this.list.addNodeAtEnd(new Node(2));
+        this.list.addNodeAtEnd(new Node(3));
+        this.list.addNodeAtEnd(new Node(2));
+        this.list.addNodeAtEnd(new Node(1));
+        this.list.addNodeAtEnd(new Node(0));
+    }
+    
     public isPalindrome<T>(list: SingleLinkedList<T>): boolean {
 
         let dataStack: T[] = [];

@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router';
+
 import { UniqueCharactersComponent } from './dataStructures/01ArraysAndStrings/01UniqueCharacters/uniqueCharacters.component.ts';
 import { ReverseStringComponent } from './dataStructures/01ArraysAndStrings/02ReverseString/reverseString.component.ts';
 import { IsPermutationComponent } from './dataStructures/01ArraysAndStrings/03IsPermutation/isPermutation.component.ts';
 import { ReplaceAllSpacesComponent } from './dataStructures/01ArraysAndStrings/04ReplaceAllSpaces/replaceAllSpaces.component.ts';
 import { RemoveDuplicatesComponent } from './dataStructures/02LinkedLists/01RemoveDuplicates/removeDuplicates.component.ts';
 import { PartitionAroundValueComponent } from './dataStructures/02LinkedLists/04PartitionAroundValue/partitionAroundValue.component.ts';
+import { IsPalindromeComponent } from './dataStructures/02LinkedLists/07IsPalindrome/isPalindrome.component.ts';
 
 @Component({
     directives: [
@@ -13,7 +16,8 @@ import { PartitionAroundValueComponent } from './dataStructures/02LinkedLists/04
         IsPermutationComponent,
         ReplaceAllSpacesComponent,
         RemoveDuplicatesComponent,
-        PartitionAroundValueComponent
+        PartitionAroundValueComponent,
+        IsPalindromeComponent
     ],
     selector: 'cut-app',
     template: require('./app.component.html')
