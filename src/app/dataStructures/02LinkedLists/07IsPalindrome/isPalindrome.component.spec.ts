@@ -1,19 +1,19 @@
-import { beforeEachProviders, describe, expect, inject, it } from '@angular/core/testing';
+import { addProviders, inject } from '@angular/core/testing';
 
 import { SingleLinkedList, Node } from '../01RemoveDuplicates/removeDuplicates.component.ts';
 import { IsPalindromeComponent } from './isPalindrome.component.ts';
 
-describe('PartitionAroundValueComponent', () => {
+describe('IsPalindromeComponent', () => {
 
-    beforeEachProviders(() => [
+    beforeEach(() => addProviders([
         IsPalindromeComponent
-    ]);
+    ]));
 
     it('should be created', inject([IsPalindromeComponent], (isPalindromeComponent: IsPalindromeComponent) => {
         expect(isPalindromeComponent).toBeDefined();
     }));
 
-    describe('partitionAround()', () => {
+    describe('isPalindrome()', () => {
 
         it('should detect a palindrome with an even length', inject([IsPalindromeComponent], (isPalindromeComponent: IsPalindromeComponent) => {
             let list: SingleLinkedList<number> = new SingleLinkedList<number>();

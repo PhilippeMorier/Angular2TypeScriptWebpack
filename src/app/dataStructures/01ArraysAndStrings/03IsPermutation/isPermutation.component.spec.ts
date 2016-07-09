@@ -1,12 +1,12 @@
-import { beforeEachProviders, describe, expect, inject, it } from '@angular/core/testing';
+import { addProviders, inject } from '@angular/core/testing';
 
 import { IsPermutationComponent } from './isPermutation.component.ts';
 
 describe('IsPermutationComponent', () => {
 
-    beforeEachProviders(() => [
+    beforeEach(() => addProviders([
         IsPermutationComponent
-    ]);
+    ]));
 
     it('should be created', inject([IsPermutationComponent], (isPermutationComponent: IsPermutationComponent) => {
         expect(isPermutationComponent).toBeDefined();

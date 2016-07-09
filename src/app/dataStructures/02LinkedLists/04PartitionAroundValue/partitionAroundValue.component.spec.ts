@@ -1,13 +1,13 @@
-import { beforeEachProviders, describe, expect, inject, it } from '@angular/core/testing';
+import { addProviders, inject } from '@angular/core/testing';
 
 import { SingleLinkedList, Node } from '../01RemoveDuplicates/removeDuplicates.component.ts';
 import { PartitionAroundValueComponent } from '../04PartitionAroundValue/partitionAroundValue.component.ts';
 
 describe('PartitionAroundValueComponent', () => {
 
-    beforeEachProviders(() => [
+    beforeEach(() => addProviders([
         PartitionAroundValueComponent
-    ]);
+    ]));
 
     it('should be created', inject([PartitionAroundValueComponent], (partitionAroundValueComponent: PartitionAroundValueComponent) => {
         expect(partitionAroundValueComponent).toBeDefined();

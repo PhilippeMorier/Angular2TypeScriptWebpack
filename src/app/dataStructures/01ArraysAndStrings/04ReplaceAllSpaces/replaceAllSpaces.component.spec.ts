@@ -1,12 +1,12 @@
-import { beforeEachProviders, describe, expect, inject, it } from '@angular/core/testing';
+import { addProviders, inject } from '@angular/core/testing';
 
 import { ReplaceAllSpacesComponent } from './replaceAllSpaces.component.ts';
 
 describe('ReplaceAllSpacesComponent', () => {
 
-    beforeEachProviders(() => [
+    beforeEach(() => addProviders([
         ReplaceAllSpacesComponent
-    ]);
+    ]));
 
     it('should be created', inject([ReplaceAllSpacesComponent], (replaceAllSpacesComponent: ReplaceAllSpacesComponent) => {
         expect(replaceAllSpacesComponent).toBeDefined();

@@ -7,7 +7,7 @@ Angular2TypeScriptWebpack
 3. E2E tests
 4. Unit tests (`karma-sourcemap-loader` as preprocessors in `karma.conf.js` & `source-map-support` as frameworks in `karma.conf.js`)
 5. Webpack: common modules, maybe separate main, app, spec
-6. Refactor `tslint.ts` by merging the rules from codelyzer, tslint & tslint-microsoft-contrib (http://stackoverflow.com/questions/171251/how-can-i-merge-properties-of-two-javascript-objects-dynamically)
+6. Refactor `tslint.json` by merging the rules from codelyzer, tslint & tslint-microsoft-contrib (http://stackoverflow.com/questions/171251/how-can-i-merge-properties-of-two-javascript-objects-dynamically)
 7. User angular router (with child routes & [routerLinkActive])
 8. Have different config for development and production (ev. test)
 

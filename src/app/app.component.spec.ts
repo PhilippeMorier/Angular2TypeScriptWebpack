@@ -1,16 +1,16 @@
 import { DebugElement } from '@angular/core';
-import { beforeEachProviders, describe, expect, inject, it } from '@angular/core/testing';
+import { addProviders, inject } from '@angular/core/testing';
 import { ComponentFixture, TestComponentBuilder } from '@angular/compiler/testing';
 import { getDOM } from '@angular/platform-browser/src/dom/dom_adapter';
-import { Type } from '@angular/compiler/src/facade/lang';
+import { ConcreteType } from '@angular/compiler/src/facade/lang';
 
 import { AppComponent } from './app.component.ts';
 
 describe('AppComponent', () => {
 
-    beforeEachProviders(() => [
+    beforeEach(() => addProviders([
         AppComponent
-    ]);
+    ]));
 
     it('should be created', inject([AppComponent], (appComponent: AppComponent) => {
         expect(appComponent).toBeDefined();
@@ -23,7 +23,7 @@ describe('AppComponent', () => {
     it('should show title if title is available',
         inject([TestComponentBuilder], (testComponentBuilder: TestComponentBuilder) => {
             testComponentBuilder
-                .createAsync(AppComponent as Type)
+                .createAsync(AppComponent as ConcreteType<AppComponent>)
                 .then((fixture: ComponentFixture<AppComponent>) => {
                     let appComponent: AppComponent = fixture.debugElement.componentInstance;
                     let appComponentTemplate: DebugElement  = fixture.debugElement.nativeElement;
@@ -42,7 +42,7 @@ describe('AppComponent', () => {
     it('should hide title if title is unavailable',
         inject([TestComponentBuilder], (testComponentBuilder: TestComponentBuilder) => {
             testComponentBuilder
-                .createAsync(AppComponent as Type)
+                .createAsync(AppComponent as ConcreteType<AppComponent>)
                 .then((fixture: ComponentFixture<AppComponent>) => {
                     let appComponent: AppComponent = fixture.debugElement.componentInstance;
                     let appComponentTemplate: DebugElement  = fixture.debugElement.nativeElement;

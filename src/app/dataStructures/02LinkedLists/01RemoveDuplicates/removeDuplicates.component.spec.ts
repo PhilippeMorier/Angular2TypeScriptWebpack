@@ -1,12 +1,12 @@
-import { beforeEachProviders, describe, expect, inject, it } from '@angular/core/testing';
+import { addProviders, inject } from '@angular/core/testing';
 
 import { RemoveDuplicatesComponent, SingleLinkedList, Node } from './removeDuplicates.component.ts';
 
 describe('RemoveDuplicatesComponent', () => {
 
-    beforeEachProviders(() => [
+    beforeEach(() => addProviders([
         RemoveDuplicatesComponent
-    ]);
+    ]));
 
     it('should be created', inject([RemoveDuplicatesComponent], (removeDuplicatesComponent: RemoveDuplicatesComponent) => {
         expect(removeDuplicatesComponent).toBeDefined();

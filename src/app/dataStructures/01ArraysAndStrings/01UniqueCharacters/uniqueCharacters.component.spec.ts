@@ -1,12 +1,12 @@
-import { beforeEachProviders, describe, expect, inject, it } from '@angular/core/testing';
+import { addProviders, inject } from '@angular/core/testing';
 
 import { UniqueCharactersComponent } from './uniqueCharacters.component.ts';
 
 describe('UniqueCharacters', () => {
 
-    beforeEachProviders(() => [
+    beforeEach(() => addProviders([
         UniqueCharactersComponent
-    ]);
+    ]));
 
     it('should be created', inject([UniqueCharactersComponent], (uniqueCharactersComponent: UniqueCharactersComponent) => {
         expect(uniqueCharactersComponent).toBeDefined();
