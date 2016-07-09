@@ -27,7 +27,7 @@ describe('PartitionAroundValueComponent', () => {
 
             expect(isPalindromeComponent.isPalindrome<number>(list)).toBeTruthy();
         }));
-        
+
         it('should detect a palindrome with an odd length', inject([IsPalindromeComponent], (isPalindromeComponent: IsPalindromeComponent) => {
             let list: SingleLinkedList<number> = new SingleLinkedList<number>();
             list.addNodeAtEnd(new Node(0));

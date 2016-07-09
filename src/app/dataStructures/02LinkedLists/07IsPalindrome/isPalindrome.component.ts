@@ -29,12 +29,10 @@ export class IsPalindromeComponent {
             fastRunner = (fastRunner.nextNode) ? fastRunner.nextNode.nextNode : undefined;
         }
 
-        console.log(dataStack);
-
-        let toCompare = (listLength % 2 === 0) ? slowRunner : slowRunner.nextNode;
+        let toCompare: Node<T> = (listLength % 2 === 0) ? slowRunner : slowRunner.nextNode;
         while (dataStack.length > 0) {
-            let data = dataStack.pop();
-            if(data !== toCompare.data) {
+            let data: T = dataStack.pop();
+            if (data !== toCompare.data) {
                 return false;
             }
 

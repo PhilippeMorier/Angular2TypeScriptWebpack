@@ -54,12 +54,12 @@ export class SingleLinkedList<T> {
     }
 
     public addNodeAtEnd(node: Node<T>): void {
-        if(!this.lastNode) {
+        if (!this.lastNode) {
             this.constructor(node);
 
             return;
         }
-        
+
         this.lastNode.nextNode = node;
         this.lastNode = node;
     }

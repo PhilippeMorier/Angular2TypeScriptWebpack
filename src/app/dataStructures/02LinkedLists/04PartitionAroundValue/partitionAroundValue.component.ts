@@ -29,11 +29,11 @@ export class PartitionAroundValueComponent {
             if (currentNode.data <= value) {
                 smallerOrEqualThanValueList.addNodeAtEnd(new Node(currentNode.data));
             }
-            
+
             else {
                 greaterThanValueList.addNodeAtEnd(new Node(currentNode.data));
             }
-            
+
             currentNode = currentNode.nextNode;
         } while (currentNode);
 
