@@ -9,6 +9,7 @@ Angular2TypeScriptWebpack
 5. Webpack: common modules, maybe separate main, app, spec
 6. Refactor `tslint.ts` by merging the rules from codelyzer, tslint & tslint-microsoft-contrib (http://stackoverflow.com/questions/171251/how-can-i-merge-properties-of-two-javascript-objects-dynamically)
 7. User angular router (with child routes & [routerLinkActive])
+8. Have different config for development and production (ev. test)
 
 ## 1. @Component, @Pipe, @Router
 ### 1.1 Error

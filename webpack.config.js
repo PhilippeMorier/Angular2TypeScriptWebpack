@@ -57,7 +57,10 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            ejs: {
+                environment: 'Development'
+            },
+            template: './src/index.ejs',
             favicon: './src/assets/favicon.ico',
             excludeChunks: ['spec']
         }),
