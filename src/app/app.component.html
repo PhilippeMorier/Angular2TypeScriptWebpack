@@ -1,30 +1,8 @@
 <h1 *ngIf="title">{{ title }}</h1>
 
-<h2>01 Arrays and Strings</h2>
-<ul>
-    <li>
-        <cut-unique-characters></cut-unique-characters>
-    </li>
-    <li>
-        <cut-reverse-string></cut-reverse-string>
-    </li>
-    <li>
-        <cut-is-permutation></cut-is-permutation>
-    </li>
-    <li>
-        <cut-replace-all-spaces></cut-replace-all-spaces>
-    </li>
-</ul>
+<nav>
+    <a [routerLink]="['DataStructures']">Data Structures</a>
+    <a [routerLink]="['ConceptsAndAlgorithms']">Concepts And Algorithms</a>
+</nav>
 
-<h2>02 Linked Lists</h2>
-<ul>
-    <li>
-        <cut-remove-duplicates></cut-remove-duplicates>
-    </li>
-    <li>
-        <cut-partition-around-value></cut-partition-around-value>
-    </li>
-    <li>
-        <cut-is-palindrome></cut-is-palindrome>
-    </li>
-</ul>
+<router-outlet></router-outlet>

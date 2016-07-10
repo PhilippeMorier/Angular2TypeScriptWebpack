@@ -18,7 +18,7 @@ export class IsPalindromeComponent {
         this.list.addNodeAtEnd(new Node(1));
         this.list.addNodeAtEnd(new Node(0));
     }
-    
+
     public isPalindrome<T>(list: SingleLinkedList<T>): boolean {
 
         let dataStack: T[] = [];

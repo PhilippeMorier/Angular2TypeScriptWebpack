@@ -5,9 +5,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
     directives: [
         ROUTER_DIRECTIVES
     ],
-    selector: 'cut-app',
-    template: require('./app.component.html')
+    template: require('./dataStructures.component.html')
 })
-export class AppComponent {
-    public title: string = 'CUT App';
+export class DataStructuresComponent {
 }
