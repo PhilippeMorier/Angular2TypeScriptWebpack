@@ -11,7 +11,7 @@ import { ReplaceAllSpacesComponent } from './04ReplaceAllSpaces/replaceAllSpaces
         ReverseStringComponent,
         IsPermutationComponent,
         ReplaceAllSpacesComponent
-    ],
+    ] as any[],
     template: require('./arraysAndStrings.component.html')
 })
 export class ArraysAndStringsComponent {

@@ -11,7 +11,7 @@ import { IsPalindromeComponent } from './07IsPalindrome/isPalindrome.component.t
         RemoveDuplicatesComponent,
         PartitionAroundValueComponent,
         IsPalindromeComponent
-    ],
+    ] as any[],
     template: require('./linkedLists.component.html')
 })
 export class LinkedListsComponent {
