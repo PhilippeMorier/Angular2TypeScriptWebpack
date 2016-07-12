@@ -22,6 +22,14 @@ describe('ReplaceAllSpacesComponent', () => {
             expect(replaceAllSpacesComponent.replaceAllSpacesIn('   a      ')).toEqual('%20%20%20a');
         }));
 
+        it('should replace nothing if there isn\'t any spaces', inject([ReplaceAllSpacesComponent], (replaceAllSpacesComponent: ReplaceAllSpacesComponent) => {
+            expect(replaceAllSpacesComponent.replaceAllSpacesIn('NoSpacesToReplace')).toEqual('NoSpacesToReplace');
+        }));
+
+        it('should return empty string if one is provided', inject([ReplaceAllSpacesComponent], (replaceAllSpacesComponent: ReplaceAllSpacesComponent) => {
+            expect(replaceAllSpacesComponent.replaceAllSpacesIn('')).toEqual('');
+        }));
+
     });
 
 });

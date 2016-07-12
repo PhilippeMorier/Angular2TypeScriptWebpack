@@ -40,6 +40,18 @@ describe('IsPalindromeComponent', () => {
             expect(isPalindromeComponent.isPalindrome<number>(list)).toBeTruthy();
         }));
 
+        it('should detect a non-palindrome with an odd length', inject([IsPalindromeComponent], (isPalindromeComponent: IsPalindromeComponent) => {
+            let list: SingleLinkedList<number> = new SingleLinkedList<number>();
+            list.addNodeAtEnd(new Node(0));
+            list.addNodeAtEnd(new Node(1));
+            list.addNodeAtEnd(new Node(2));
+            list.addNodeAtEnd(new Node(3));
+            list.addNodeAtEnd(new Node(4));
+            list.addNodeAtEnd(new Node(5));
+
+            expect(isPalindromeComponent.isPalindrome<number>(list)).toBeFalsy();
+        }));
+
     });
 
 });
