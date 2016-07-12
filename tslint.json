@@ -1,4 +1,5 @@
 {
+  // tslint - TypeScript specific
   "rulesDirectory": [
     "node_modules/codelyzer",
     "node_modules/tslint-microsoft-contrib"
@@ -44,6 +45,18 @@
       "variable-declaration",
       "member-variable-declaration"
     ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    
+    // tslint - functionality
     "ban": [
       true,
       [
@@ -83,6 +96,8 @@
     "use-isnan": true,
     "use-strict": true,
     "eofline": true,
+    
+    // tslint - maintainability
     "indent": [
       true,
       "spaces"
@@ -137,16 +152,6 @@
       true,
       "always"
     ],
-    "typedef-whitespace": [
-      true,
-      {
-        "call-signature": "nospace",
-        "index-signature": "nospace",
-        "parameter": "nospace",
-        "property-declaration": "nospace",
-        "variable-declaration": "nospace"
-      }
-    ],
     "variable-name": [
       true,
       "ban-keywords",
@@ -162,6 +167,8 @@
       "check-type",
       "check-typecast"
     ],
+    
+    // codelyzer
     "directive-selector-name": [
       true,
       "camelCase"
@@ -204,8 +211,7 @@
     "directive-class-suffix": true,
     "import-destructuring-spacing": true,
     
-    
-    
+    // tslint-microsoft-contrib
     "no-banned-terms": true,
     "no-delete-expression": true,
     "no-document-domain": true,
@@ -218,8 +224,6 @@
     "no-string-based-set-immediate": true,
     "no-string-based-set-interval": true,
     "no-string-based-set-timeout": true,
-    "no-duplicate-key": true,
-    "no-eval": true,
-    "use-strict": true
+    "no-duplicate-key": true
   }
 }
