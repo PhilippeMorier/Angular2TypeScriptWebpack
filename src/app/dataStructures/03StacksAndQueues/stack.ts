@@ -28,7 +28,7 @@ export class Stack<T> {
 
         let stringResult: string = '';
         while (current) {
-            stringResult += current.data + '->';
+            stringResult += current.data + ' → ';
             current = current.next;
         }
 
