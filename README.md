@@ -61,3 +61,16 @@ Remove 'source-map-support' in `karma.conf.js`.
  ```JavaScript
  frameworks: ['jasmine', 'source-map-support'],
  ```
+ 
+## 5. Barrel Files
+### 4 .1 Error
+Cannot resolve folder path even if an `index.ts` is provided.
+
+### 4 .2 Solution
+Add resolve extensions to `webpack.config.js`
+
+ ```JavaScript
+resolve: {
+        extensions: ['', '.js', '.ts']
+    },
+ ```
