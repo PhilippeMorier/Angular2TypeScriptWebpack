@@ -28,6 +28,10 @@ module.exports = {
         filename: '[name].[hash].js'
     },
 
+    resolve: {
+        extensions: ['', '.js', '.ts']
+    },
+
     module: {
         loaders: [
             {
