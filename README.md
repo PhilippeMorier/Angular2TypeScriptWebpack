@@ -12,6 +12,12 @@ Angular2TypeScriptWebpack
 8. Have different config for development and production (ev. test)
 9. Use animations
 10. Internationalisation
+11. Import rxjs operators, so that IDE can resolve used functions:
+    - `import 'rxjs/add/operator/map'`
+    - `import 'rxjs/add/operator/retryWhen'`
+    - `import 'rxjs/add/operator/delay'`
+12. Use http://redux.js.org as a state container
+13. Use forms: https://www.youtube.com/watch?v=E92KS_YCSf8
 
 ## 1. @Component, @Pipe, @Router
 ### 1.1 Error
