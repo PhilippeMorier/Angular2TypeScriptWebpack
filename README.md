@@ -16,8 +16,9 @@ Angular2TypeScriptWebpack
     - `import 'rxjs/add/operator/map'`
     - `import 'rxjs/add/operator/retryWhen'`
     - `import 'rxjs/add/operator/delay'`
-12. Use http://redux.js.org as a state container
-13. Use forms: https://www.youtube.com/watch?v=E92KS_YCSf8
+12. Add RxJS as a javascript library in IntelliJ to solve resolve issues: http://stackoverflow.com/a/38499577
+13. Use http://redux.js.org as a state container
+14. Use forms: https://www.youtube.com/watch?v=E92KS_YCSf8
 
 ## 1. @Component, @Pipe, @Router
 ### 1.1 Error
