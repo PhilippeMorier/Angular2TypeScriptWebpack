@@ -19,6 +19,7 @@ Angular2TypeScriptWebpack
 12. Add RxJS as a javascript library in IntelliJ to solve resolve issues: http://stackoverflow.com/a/38499577
 13. Use http://redux.js.org as a state container
 14. Use forms: https://www.youtube.com/watch?v=E92KS_YCSf8
+15. Take a look into [offline template compilation](http://www.syntaxsuccess.com/viewarticle/offline-compilation-in-angular-2.0)
 
 ## 1. @Component, @Pipe, @Router
 ### 1.1 Error
