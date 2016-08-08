@@ -20,6 +20,7 @@ Angular2TypeScriptWebpack
 13. Use http://redux.js.org as a state container
 14. Use forms: https://www.youtube.com/watch?v=E92KS_YCSf8
 15. Take a look into [offline template compilation](http://www.syntaxsuccess.com/viewarticle/offline-compilation-in-angular-2.0)
+16. Create a custom component (e.g. tabs, cards) with `host: { '[class.touched]': 'isTouched' }` according to [Angular's controle state](https://github.com/angular/angular/blob/ae75e3640a2d9eb1e897a0771d92b976c5a42c75/modules/%40angular/common/src/forms-deprecated/directives/ng_control_status.ts#L24) and [Angular Material2](https://github.com/angular/material2/tree/4bb7790653e160bd6d72cfbe117309cb9020f521/src/components)
 
 ## 1. @Component, @Pipe, @Router
 ### 1.1 Error
