@@ -23,7 +23,8 @@ Angular2TypeScriptWebpack
 16. Create a custom component (e.g. tabs, cards) with `host: { '[class.touched]': 'isTouched' }` according to [Angular's controle state](https://github.com/angular/angular/blob/ae75e3640a2d9eb1e897a0771d92b976c5a42c75/modules/%40angular/common/src/forms-deprecated/directives/ng_control_status.ts#L24) and [Angular Material2](https://github.com/angular/material2/tree/4bb7790653e160bd6d72cfbe117309cb9020f521/src/components), [@HostBindings](http://stackoverflow.com/a/36908784)
 17. Use [`npm shrinkwrap`](https://docs.npmjs.com/cli/shrinkwrap)
 18. Use Webpack 2
-19. Debug app within IntelliJ by [adding](http://stackoverflow.com/a/34683043) a new `'JavaScript Debug'` configuration (`'Shift + Cmd + A'` -> `'Edit Configurations...'`) 
+19. Debug app within IntelliJ by [adding](http://stackoverflow.com/a/34683043) a new `'JavaScript Debug'` configuration (`'Shift + Cmd + A'` -> `'Edit Configurations...'`)
+20. Document how to [disable specific TsLint rule](https://github.com/palantir/tslint#rule-flags) for specific context
 
 ## 1. @Component, @Pipe, @Router
 ### 1.1 Error
