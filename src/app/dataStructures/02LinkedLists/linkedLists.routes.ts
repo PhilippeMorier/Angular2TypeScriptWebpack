@@ -1,9 +1,10 @@
-import { RouterConfig } from '@angular/router';
+import { Routes } from '@angular/router';
+
 import { LinkedListsComponent } from './linkedLists.component.ts';
 
-export const LINKED_LISTS_ROUTES: RouterConfig = [
+export const LINKED_LISTS_ROUTES: Routes = [
     {
         component: LinkedListsComponent,
         path: 'LinkedLists'
     }
-] as RouterConfig;
+] as Routes;
