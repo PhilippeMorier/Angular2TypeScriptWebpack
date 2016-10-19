@@ -27,6 +27,7 @@ Angular2TypeScriptWebpack
 20. Document how to [disable specific TsLint rule](https://github.com/palantir/tslint#rule-flags) for specific context
 21. Try [Ahead of Time (AoT)](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html) compilation
 22. Enable Tree Shaking by using Webpack 2
+23. Ev. using Webpack config: ts: { configFileName: './tsconfig.test.json' } -> requires ts-loader :(
 
 ## 1. @Component, @Pipe, @Router
 ### 1.1 Error
