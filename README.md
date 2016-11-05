@@ -29,7 +29,7 @@ Angular2TypeScriptWebpack
 22. Enable Tree Shaking by using Webpack 2
 23. Ev. using Webpack config: ts: { configFileName: './tsconfig.test.json' } -> requires ts-loader :(
 24. Try out [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard)
-25. Use [HotModuleReloading](https://youtu.be/y_kNdZ1_Rsk) (HMR)
+25. Use [HotModuleReloading](https://youtu.be/y_kNdZ1_Rsk) (HMR), [angular2-hmr](https://github.com/AngularClass/angular2-hmr)
 
 ## 1. @Component, @Pipe, @Router
 ### 1.1 Error
