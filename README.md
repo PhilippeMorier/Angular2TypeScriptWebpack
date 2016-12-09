@@ -30,6 +30,7 @@ Angular2TypeScriptWebpack
 23. Ev. using Webpack config: ts: { configFileName: './tsconfig.test.json' } -> requires ts-loader :(
 24. Try out [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard)
 25. Use [HotModuleReloading](https://youtu.be/y_kNdZ1_Rsk) (HMR), [angular2-hmr](https://github.com/AngularClass/angular2-hmr)
+26. Create [transition](https://plnkr.co/edit/nIfsVs?p=preview) between routing by using [host and styles property] (http://stackoverflow.com/a/40077108/3731530)
 
 ## 1. @Component, @Pipe, @Router
 ### 1.1 Error
