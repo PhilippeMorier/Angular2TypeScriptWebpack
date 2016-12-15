@@ -1,7 +1,7 @@
-import { RouterConfig } from '@angular/router';
+import { Routes } from '@angular/router';
 import { ArraysAndStringsComponent } from './arraysAndStrings.component.ts';
 
-export const ARRAYS_AND_STRINGS_ROUTES: RouterConfig = [
+export const ARRAYS_AND_STRINGS_ROUTES: Routes = [
     {
         path: '',
         pathMatch: 'full',
@@ -11,4 +11,4 @@ export const ARRAYS_AND_STRINGS_ROUTES: RouterConfig = [
         component: ArraysAndStringsComponent,
         path: 'ArraysAndStrings'
     }
-] as RouterConfig;
+];

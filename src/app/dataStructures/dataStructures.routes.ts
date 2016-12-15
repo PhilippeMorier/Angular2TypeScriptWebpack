@@ -1,10 +1,10 @@
-import { RouterConfig } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { DataStructuresComponent } from './dataStructures.component.ts';
 import { ARRAYS_AND_STRINGS_ROUTES } from './01ArraysAndStrings/arraysAndStrings.routes.ts';
 import { LINKED_LISTS_ROUTES } from './02LinkedLists/linkedLists.routes.ts';
 
-export const DATA_STRUCTURES_ROUTES: RouterConfig = [
+export const DATA_STRUCTURES_ROUTES: Routes = [
     {
         path: '',
         pathMatch: 'full',
@@ -18,4 +18,4 @@ export const DATA_STRUCTURES_ROUTES: RouterConfig = [
         component: DataStructuresComponent,
         path: 'DataStructures'
     }
-] as RouterConfig;
+];
